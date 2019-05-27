@@ -1,11 +1,42 @@
 # TreeCrossSec
 Tree stem cross-section reconstruction with free-form curves from point clouds
+# Usage
+VV = TreeCrossSec(Sp, res_thres, Forder) <br/>
+
+% Input:
+% Sp: nxm point cloud (unit in m). The dimension m should be at least 2.
+% optional:
+% res_thres: residual tolerance e.g., 0.01 (cm)
+% Forder: Fourier series order (1 - 8)
+%
+% Output:
+% VV: a structure variable contains diameter estimations from various
+% methods, and reconstructed points in ModelX&ModelY. Usually FouCirc gives
+% the best diameter estimation.
+% 
+% 1. Arc length extrapolation
+% VV.Fourier
+% 2. Arc length + Circle
+% VV.FouCirc
+% VV.FouCirc_cent_x 
+% VV.FouCirc_cent_y
+% 3. Refined direct Circle fitting
+% VV.RefinedCircle
+% 4. Direct Circle fitting
+% VV.DirectCircle
+% 5. modeled points
+% VV.ModelX
+% VV.ModelY
+% 6. parameters
+% VV.Forder
+% VV.Thres
+
 # Examples
 Example 1 <br/>
 VV = TreeCrossSec(Sp, 0.01, 8);
 ![example 1](e1.png)
 Example 2 <br/> 
-(this method only works perfectly for convecx shapes) <br/>
+(this method only works perfectly for convex shapes) <br/>
 VV = TreeCrossSec(Sp, 0.05, 8);
 ![example 2](e2.png)
 Example 3 <br/>
