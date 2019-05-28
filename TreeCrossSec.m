@@ -12,7 +12,7 @@ function VV = TreeCrossSec(Sp, res_thres, Forder)
 % Forder: Fourier series order (1 - 8)
 %
 % Output:
-% VV: a structure variable contains diameter estimations from various
+% VV: a structure variable contains radius estimations from various
 % methods, and reconstructed points in ModelX&ModelY. Usually FouCirc gives
 % the best diameter estimation.
 % 
