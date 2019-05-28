@@ -10,7 +10,7 @@ res_thres: residual tolerance e.g., 0.01 (cm)<br/>
 Forder: Fourier series order (1 - 8)<br/>
 
 Output:<br/>
-VV: a structure variable contains diameter estimations from various methods, and reconstructed points in ModelX&ModelY. Usually FouCirc gives the best diameter estimation.
+VV: a structure variable contains radius estimations from various methods, and reconstructed points in ModelX&ModelY. Usually FouCirc gives the best diameter estimation.
 
 # Examples
 Example 1 <br/>
