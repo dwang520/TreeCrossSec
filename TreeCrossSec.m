@@ -43,14 +43,14 @@ function VV = TreeCrossSec(Sp, res_thres, Forder)
 
 
 %% arguments
-if nargin<1
+if nargin<1 || isempty(Sp) || ~exist('Sp', 'var')
     disp('function needs at least a point list (nx2) as input !')
     VV = [];
     return;
-elseif (nargin < 2)
+elseif (nargin < 2) || isempty(res_thres) || ~exist('res_thres', 'var')
     res_thres = 0.02;
 end
-if (nargin <3)
+if (nargin <3) || isempty(Forder) || ~exist('Forder', 'var')
     Forder = 5;
 end
 
@@ -63,6 +63,8 @@ if size(Sp,1)>2000
 else
     rnum = size(Sp,1);
 end
+
+rng('default')  % For reproducibility
 randindx = randperm(size(Sp,1),rnum);
 Sp = Sp(randindx,:);
 
