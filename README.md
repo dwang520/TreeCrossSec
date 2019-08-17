@@ -1,4 +1,5 @@
 # TreeCrossSec
+[![DOI](https://zenodo.org/badge/188862143.svg)](https://zenodo.org/badge/latestdoi/188862143)<br/>
 Tree stem cross-section reconstruction with free-form curves from point clouds
 # Usage
 VV = TreeCrossSec(Sp, res_thres, Forder) <br/>
